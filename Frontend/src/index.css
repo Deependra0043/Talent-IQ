@@ -1,3 +1,9 @@
+@property --radialprogress {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: all;
