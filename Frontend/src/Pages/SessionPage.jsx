@@ -1,19 +1,19 @@
 import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { useEndSession, useJoinSession, useSessionById } from "../hooks/useSessions";
-import { PROBLEMS } from "../data/problems";
-import { executeCode } from "../lib/piston";
-import Navbar from "../components/Navbar";
+import { useEndSession, useJoinSession, useSessionById } from "../Hooks/UseSessions";
+import { PROBLEMS } from "../Data/Problems";
+import { executeCode } from "../lib/Piston";
+import Navbar from "../Components/Navbar";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { getDifficultyBadgeClass } from "../lib/utils";
+import { getDifficultyBadgeClass } from "../lib/Utils";
 import { Loader2Icon, LogOutIcon, PhoneOffIcon } from "lucide-react";
-import CodeEditorPanel from "../components/CodeEditorPanel";
-import OutputPanel from "../components/OutputPanel";
+import CodeEditorPanel from "../Components/CodeEditorPanel";
+import OutputPanel from "../Components/OutputPanel";
 
-import useStreamClient from "../hooks/useStreamClient";
+import useStreamClient from "../Hooks/UseStreamClient";
 import { StreamCall, StreamVideo } from "@stream-io/video-react-sdk";
-import VideoCallUI from "../components/VideoCallUI";
+import VideoCallUI from "../Components/VideoCallUI";
 
 function SessionPage() {
   const navigate = useNavigate();
