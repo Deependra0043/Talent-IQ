@@ -1,3 +1,5 @@
+
+/* Move this to the top of your global.css / index.css */
 @property --radialprogress {
   syntax: "<percentage>";
   inherits: true;
