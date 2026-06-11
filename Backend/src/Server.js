@@ -1,5 +1,5 @@
 import express from  "express";
-    import {ENV} from "./lib/env.js";
+    import {ENV} from "./Lib/env.js";
 
 const app = express();
 
@@ -20,19 +20,19 @@ app.get("/books", (req,res) => {
 
 // make our app ready for deployment
 if(ENV.NODE_ENV === "production"){
-    app.use(express.static(path.join(__dirname,"../frontend/dist")))
+    app.use(express.static(path.join(__dirname,"../Frontend/dist")))
 
     app.get("/{*any}", (req,res) => {
-        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+        res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
     }) 
 }
 
 // make our app ready for deployment
 if (ENV.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 
   app.get("/{*any}", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
   });
 }
 

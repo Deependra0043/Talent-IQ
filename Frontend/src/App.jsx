@@ -1,12 +1,12 @@
 import { useUser } from "@clerk/clerk-react";
 import { Navigate, Route, Routes } from "react-router";
-import HomePage from "./Pages/HomePage";
+import HomePage from "./Pages/HomePage.jsx";
 
 import { Toaster } from "react-hot-toast";
-import DashboardPage from "./Pages/DashboardPage";
-import ProblemPage from "./Pages/ProblemPage";
-import ProblemsPage from "./Pages/ProblemsPage";
-import SessionPage from "./Pages/SessionPage";
+import DashboardPage from "./Pages/DashboardPage.jsx";
+import ProblemPage from "./Pages/ProblemPage.jsx";
+import ProblemsPage from "./Pages/ProblemsPage.jsx";
+import SessionPage from "./Pages/SessionPage.jsx";
 
 function App() {
   const { isSignedIn, isLoaded } = useUser();

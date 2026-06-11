@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
-import { PROBLEMS } from "../Data/problems";
-import Navbar from "../components/Navbar";
+import { PROBLEMS } from "../Data/Problems.js";
+import Navbar from "../Components/Navbar.jsx";
 
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import ProblemDescription from "../components/ProblemDescription";
-import OutputPanel from "../components/OutputPanel";
-import CodeEditorPanel from "../components/CodeEditorPanel";
-import { executeCode } from "../lib/piston";
+import ProblemDescription from "../Components/ProblemDescription.jsx";
+import OutputPanel from "../Components/OutputPanel.jsx";
+import CodeEditorPanel from "../Components/CodeEditorPanel.jsx";
+import { executeCode } from "../Lib/Piston.js";
 
 import toast from "react-hot-toast";
 import confetti from "canvas-confetti";
